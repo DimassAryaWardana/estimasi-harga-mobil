@@ -17,5 +17,5 @@ if st.button('Estimasi Harga'):
     input_data = np.array([[year, mileage, tax, mpg, engineSize]])
     predict = model.predict(input_data)
 
-    st.write ('Estimasi Harga Mobil Bekas dalam Ponds : ', predict)
-    st.write ('Estimasi Harga Mobil Bekas dalam IDR (Juta) : ', predict*22000))
+    st.success("Estimasi Harga Mobil Bekas (Pounds):", predict[0])
+    st.success("Estimasi Harga Mobil Bekas dalam IDR (Juta):", predict[0]*22000)/1_000_000)
