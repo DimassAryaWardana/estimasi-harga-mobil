@@ -13,9 +13,11 @@ tax = st.number_input('Input Pajak Mobil')
 mpg = st.number_input('Input Konsumsi BBM (mpg)')
 engineSize = st.number_input('Input Engine Size')
 
-if st.button('Estimasi Harga'):
-    input_data = np.array([[year, mileage, tax, mpg, engineSize]])
-    predict = model.predict(input_data)
+predict = ''
 
-    st.success("Estimasi Harga Mobil Bekas (Pounds):", predict[0]:)
-    st.success("Estimasi Harga Mobil Bekas dalam IDR (Juta):", predict[0]*22000)/1_000_000:)
+if st.button('Estimasi Harga'):
+  predict = model.predict(
+      [[year, mileage, tax, mpg, engineSize]]
+  )
+  st.write ('Estimasi Harga Mobil Bekas dalam Ponds : ', predict)
+  st.write ('Estimasi Harga Mobil Bekas dalam IDR (Juta) : ', predict*22000)
