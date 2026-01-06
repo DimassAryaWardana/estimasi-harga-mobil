@@ -7,7 +7,7 @@ model = pickle.load(open('estimasi_mobil.sav', 'rb'))
 
 st.title('Estimasi Harga Mobil Bekas')
 
-year = st.number_input('Input Tahun Mobil', min_value=2000, max_value=2030)
+year = st.number_input('Input Tahun Mobil')
 mileage = st.number_input('Input Kilometer Mobil')
 tax = st.number_input('Input Pajak Mobil')
 mpg = st.number_input('Input Konsumsi BBM (mpg)')
